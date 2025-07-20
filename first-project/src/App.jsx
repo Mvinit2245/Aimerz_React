@@ -1,18 +1,14 @@
-import Counter from "./components/Counter"
 
+import Button from "./components/Button";
+import withClickCounter from "./components/withClickCounter";
+//import Counter from "./components/Counter"
+
+import withTheme from "./components/withTheme";
+
+
+const EnhancedButton = withClickCounter(withTheme(Button));
 function App() {
-  
-
-  return (
-   
-    <>   
-        <h1> This is the Counter</h1>
-
-        <Counter />
-          
-
-    </>
-  )
+  return <EnhancedButton text = "Click me!"/>;
 }
 
-export default App
+export default App;
