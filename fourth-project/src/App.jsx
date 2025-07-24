@@ -1,11 +1,18 @@
 
 import './App.css'
+import Counter from './components/Counter'
+import { Provider } from 'react-redux'
+import { store } from './store'
 
 function App() {
 
 
   return (
-    <h1 className="text-3xl font-bold underline"> HEllo</h1>
+    <>
+    <Provider store={store}>
+    <Counter/>
+    </Provider>
+    </>
       
   )
 }
